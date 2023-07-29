@@ -19,7 +19,8 @@ inputElement.addEventListener('blur', addBlur)
         console.log(correctLength);
         
         if (evt.currentTarget.value.length === correctLength) {   
-       inputElement.classList.add("valid");
+          inputElement.classList.add("valid");
+          inputElement.classList.remove("invalid");
         }
 
         else {   

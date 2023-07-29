@@ -8,10 +8,9 @@ const outputElement = document.getElementById("name-output");
 console.log(outputElement);
 
 
-inputElement.textContent = 'Anonymous';
-
 inputElement.addEventListener("input", changeInput);
 
 function changeInput(evt) {
-    outputElement.textContent = evt.currentTarget.value.trim();   
-        }
+    const inputText = evt.currentTarget.value.trim();
+    outputElement.textContent = inputText === "" ? "Anonymous" : inputText;
+}
